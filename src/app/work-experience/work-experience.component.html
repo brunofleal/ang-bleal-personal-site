@@ -1,0 +1,22 @@
+<div>
+    <div class="flex flex-row">
+        <h5 class="font-bold text-xl">At {{workExperience.company}}</h5>
+        <img class="rounded-md ml-2 object-fill w-[24px]" [src]="workExperience.companyLogoSrc">
+    </div>
+    <ol class="list-inside pl-4 list-decimal text-zinc-900">
+    @for (item of workExperience.projects; track item.title) {
+        <li class="font-semibold">
+            {{ item.title }} - ({{item.period.start}} - {{item.period.end}})
+            @let slicedDescription = item.description | splitDot;
+            <ol class="font-normal list-inside pl-4 list-disc text-zinc-900">
+                @for (descriptionLine of slicedDescription; track descriptionLine) {
+                    <li>
+                        {{descriptionLine}}
+                    </li>
+                }
+            </ol>
+        </li>
+        }
+    </ol>
+
+</div>

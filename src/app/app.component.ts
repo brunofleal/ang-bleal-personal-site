@@ -2,13 +2,16 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SectionComponent } from "./section/section.component";
+import { WorkExperienceComponent } from "./work-experience/work-experience.component";
+import { workExperience } from './work-experience/work-experience.constants';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, NavbarComponent, SectionComponent],
+    imports: [RouterOutlet, NavbarComponent, SectionComponent, WorkExperienceComponent],
     templateUrl: './app.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
     title = 'personal-site-bleal';
+    workExperience = workExperience
 }

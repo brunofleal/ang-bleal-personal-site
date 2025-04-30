@@ -1,7 +1,7 @@
 <main class="main">
     <div class="content bg-zinc-700 min-h-[100vh] h-fit">
         <app-navbar></app-navbar>
-        <div class="text-white px-4 sm:pt-[100px] pt-[300px]">
+        <div class="text-white px-4 sm:pt-[70px] pt-[250px]">
             <app-section class="mb-8" imagePath="assets/images/profile-picture.jfif" toHref="#">
                 <section-title>
                     <div class="bg-gradient-to-r from-slate-600 to-gray-900 bg-clip-text text-transparent w-fit">
@@ -18,7 +18,16 @@
                 <app-section toHref="#workxp">
                     <section-title>Work Experience</section-title>
                     <section-content>
+                        <div>
+                            <app-work-experience [workExperience]="workExperience"></app-work-experience>
+                        </div>
 
+                    </section-content>
+                </app-section>
+
+                <app-section toHref="#skills">
+                    <section-title>Skills</section-title>
+                    <section-content>
                     </section-content>
                 </app-section>
 
