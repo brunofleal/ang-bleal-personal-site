@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-section',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './section.component.css'
 })
 export class SectionComponent {
-
+  @Input({ required: false }) imagePath!: string;
+  @Input({ required: false }) toHref!: string;
 }

@@ -1,8 +1,27 @@
 <main class="main">
     <div class="content bg-zinc-700 min-h-[100vh] h-fit">
         <app-navbar></app-navbar>
-        <div class="text-white px-4">
-            <app-section></app-section>
+        <div class="text-white px-4 sm:pt-[100px] pt-[300px]">
+            <app-section class="mb-8" imagePath="assets/images/profile-picture.jfif" toHref="#">
+                <section-title>
+                    <div class="bg-gradient-to-r from-slate-600 to-gray-900 bg-clip-text text-transparent w-fit">
+                        About Me
+                    </div>
+                </section-title>
+                <section-content>
+                    I am a software engineer currently based on Recife/Brazil. With 6+ years of experience, I have worked in a wide range of projects
+                    in mobile, embedded mostly web environments. I am a FullStack developer that enjoys learning new technologies and employing new
+                    practices on my daily routine. Outside of work, I like tinkering with eletronics, woodworking and 3d printing.
+                </section-content>
+                </app-section>
+
+                <app-section toHref="#workxp">
+                    <section-title>Work Experience</section-title>
+                    <section-content>
+
+                    </section-content>
+                </app-section>
+
         </div>
     </div>
 </main>
