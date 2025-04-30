@@ -1,0 +1,26 @@
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    @for(skillGroup of skillGroups; track skillGroup) {
+        <div>
+            <p class="text-xl font-semibold">{{skillGroup.skillAreaLabel}}</p>
+
+            @for(skillset of skillGroup.skillSets; track skillset) {
+                <div class="text-lg font-semibold pl-4">
+                    <ng-icon name="bootstrapArrowReturnRight"></ng-icon>
+                    {{skillset.groupLabel}}
+                    <div>
+                        @for(skill of skillset.skills; track skill) {
+                            <ul class="list-disc text-md font-semibold pl-8">
+                                {{skill.label}}
+                                <div class="w-full h-4 mb-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                    @let intensityPr = skill.intensity * 25;
+                                    <div class="h-4 bg-zinc-600 rounded-full dark:bg-blue-500" style="width: {{intensityPr}}%"></div>
+                                </div>
+                            </ul>
+                        }
+                    </div>
+                </div>
+
+            }
+        </div>
+    }
+</div>
