@@ -1,13 +1,15 @@
-<div class="min-w-sm max-w-fit p-6 ">
+<div class="w-full p-6">
     <a [href]="toHref">
-        <h5 class="p-2 mb-2 text-2xl font-bold tracking-tight w-fit text-gray-900 dark:text-white bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <h5
+            class="p-2 mb-2 text-2xl font-bold tracking-tight w-fit text-gray-900 dark:text-white bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <ng-content select="section-title"></ng-content>
         </h5>
     </a>
-    <div class="flex flex-col md:flex-row gap-2">
-        <p class="p-2 text-gray-900 dark:text-white text-wrap bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 h-fit">
+    <div class="flex flex-col md:flex-row gap-2 w-full">
+        <div
+            class="w-full p-2 text-gray-900 dark:text-white text-wrap bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 h-fit">
             <ng-content select="section-content"></ng-content>
-        </p>
+        </div>
         <img class="rounded-md object-contain max-w-[100vw] md:max-h-[400px] shadow-lg" [src]="imagePath" />
     </div>
 
