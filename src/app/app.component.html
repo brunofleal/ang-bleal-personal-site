@@ -9,29 +9,31 @@
                     </div>
                 </section-title>
                 <section-content>
-                    I am a software engineer currently based on Recife/Brazil. With 6+ years of experience, I have worked in a wide range of projects
-                    in mobile, embedded mostly web environments. I am a FullStack developer that enjoys learning new technologies and employing new
-                    practices on my daily routine. Outside of work, I like tinkering with eletronics, woodworking and 3d printing.
+                    I am a software engineer currently based on Recife/Brazil. With 6+ years of experience, I have
+                    worked in a wide range of projects
+                    in mobile, embedded mostly web environments. I am a FullStack developer that enjoys learning new
+                    technologies and employing new
+                    practices on my daily routine. Outside of work, I like tinkering with eletronics, woodworking and 3d
+                    printing.
                 </section-content>
-                </app-section>
+            </app-section>
 
-                <app-section toHref="#workxp">
-                    <section-title>Work Experience</section-title>
-                    <section-content>
-                        <div>
-                            <app-work-experience [workExperience]="workExperience"></app-work-experience>
-                        </div>
+            <app-section id="workxp" toHref="#workxp">
+                <section-title>Work Experience</section-title>
+                <section-content>
+                    <div>
+                        <app-work-experience [workExperience]="workExperience"></app-work-experience>
+                    </div>
 
-                    </section-content>
-                </app-section>
+                </section-content>
+            </app-section>
 
-                <app-section toHref="#skills">
-                    <section-title>Skills</section-title>
-                    <section-content>
-                        <app-skills-fragment></app-skills-fragment>
-                    </section-content>
-                </app-section>
-
+            <app-section id="skills" toHref="#skills">
+                <section-title>Skills</section-title>
+                <section-content>
+                    <app-skills-fragment></app-skills-fragment>
+                </section-content>
+            </app-section>
         </div>
     </div>
 </main>
