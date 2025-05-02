@@ -5,14 +5,18 @@ import { SectionComponent } from "./section/section.component";
 import { WorkExperienceComponent } from "./work-experience/work-experience.component";
 import { workExperience } from './work-experience/work-experience.constants';
 import { SkillsFragmentComponent } from "./skills-fragment/skills-fragment.component";
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, NavbarComponent, SectionComponent, WorkExperienceComponent, SkillsFragmentComponent],
+    imports: [RouterOutlet, NavbarComponent, SectionComponent, WorkExperienceComponent, SkillsFragmentComponent, NgIcon],
     templateUrl: './app.component.html',
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    viewProviders: [provideIcons({ bootstrapGithub, bootstrapLinkedin })]
+
 })
 export class AppComponent {
     title = 'personal-site-bleal';
-    workExperience = workExperience
+    workExperience = workExperience;
 }
