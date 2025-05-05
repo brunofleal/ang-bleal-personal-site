@@ -1,4 +1,9 @@
-<div class="w-full p-6">
+<div class="w-full p-6"
+    @visibleHidden
+    inViewport
+    [inViewportOptions]="{ threshold: [0.2] }"
+    (inViewportAction)="isInViewPort($event)"
+>
     <a [href]="toHref">
         <h5
             class="p-2 mb-2 text-2xl font-bold tracking-tight w-fit text-gray-900 dark:text-white bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
