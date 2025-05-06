@@ -1,8 +1,7 @@
 <div class="w-full p-6"
-    @visibleHidden
     inViewport
     [inViewportOptions]="{ threshold: [0.2] }"
-    (inViewportAction)="isInViewPort($event)"
+    (inViewportAction)="onVisibilityChange($event)"
 >
     <a [href]="toHref">
         <h5

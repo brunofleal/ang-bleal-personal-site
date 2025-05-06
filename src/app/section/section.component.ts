@@ -37,4 +37,15 @@ export class SectionComponent {
   isInViewPort (event:any) {
     this.isVisible = event.target.visible;
   }
+
+  onVisibilityChange(event: any) {
+    const element = event.target;
+    if (event.visible) {
+      element.classList.add('animate-in');
+
+      setTimeout(() => {
+        element.classList.remove('animate-in');
+      }, 1000);
+    }
+  }
 }
